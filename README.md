@@ -26,21 +26,21 @@ API Testing: Postman / cURL
 
 <h1>🛆 Installation</h1>
 
-Clone the repository
+<h3>Clone the repository</h3>
 
 git clone https://github.com/yourusername/book-api.git
 cd book-api
 
-Install dependencies
+<h3>Install dependencies</h3>
 
 npm install
 
-Set up environment variablesCreate a .env file and add:
+<h3>Set up environment variablesCreate a .env file and add:</h3>
 
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 
-Start the server
+<h3>Start the server</h3>
 
 npm start
 
@@ -48,89 +48,20 @@ OR if using nodemon:
 
 npm run dev
 
-<h1>📌 API Endpoints</h1>
 
-1️⃣ Add a New Book
 
-URL: POST /books
+<h1>🐟 Environment Variables</h1>
 
-Request Body (JSON):
-
-{
-  "title": "The Great Gatsby",
-  "author": "F. Scott Fitzgerald",
-  "publishedYear": 1925
-}
-
-Response:
-
-{
-  "message": "📚 Book added successfully!",
-  "book": {
-    "_id": "65a12345b67890cde1234567",
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "publishedYear": 1925,
-    "__v": 0
-  }
-}
-
-2️⃣ Get All Books
-
-URL: GET /books
-
-Response Example:
-
-[
-  {
-    "_id": "65a12345b67890cde1234567",
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "publishedYear": 1925
-  }
-]
-
-3️⃣ Get a Book by ID
-
-URL: GET /books/:id
-
-Example:
-
-curl -X GET http://localhost:3000/books/65a12345b67890cde1234567
-
-4️⃣ Update a Book
-
-URL: PUT /books/:id
-
-Request Body (JSON):
-
-{
-  "title": "The Great Gatsby (Updated)",
-  "publishedYear": 1930
-}
-
-5️⃣ Delete a Book
-
-URL: DELETE /books/:id
-
-Response:
-
-{
-  "message": "🗑️ Book deleted successfully!"
-}
-
-🐟 Environment Variables
-
-This project uses a .env file for configuration. Example:
+<p>This project uses a .env file for configuration. Example:</p>
 
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 
-Ensure .env is added to .gitignore:
+<p>Ensure .env is added to .gitignore:</p>
 
 echo "# Ignore env file" >> .gitignore
 echo ".env" >> .gitignore
 
-📜 License
+<h1>📜 License</h1>
 
 This project is open-source and free to use.
